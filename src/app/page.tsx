@@ -1,20 +1,20 @@
-import './styles.css'; 
+"use client";
+import styles from "@/styles/page.module.css";
 
 export default function Page() {
-    return (
-        <div>
-            <header className="header">
-                <h1>incluVerse</h1>
-            </header>
-            <main className="main">
-                <h2>Noticias y Actualizaciones</h2>
-                <p>Aquí se mostrarán las últimas noticias sobre libros y actualizaciones de la biblioteca.</p>
-            </main>
-            <footer className="footer">
-                <p>Contacto: info@biblioteca.com | Teléfono: (123) 456-7890</p>
-                <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
-                <p>&copy; 2023 Derechos de autor del software</p>
-            </footer>
-        </div>
-    );
+  return (
+    <div className={styles.pageContainer}>
+      <header className={styles.header}>
+        📚 Biblioteca Virtual
+      </header>
+      
+      <main className={styles.content}>
+        <p>Bienvenido a la biblioteca virtual inclusiva. Explora, aprende y disfruta del conocimiento accesible para todos.</p>
+      </main>
+      
+      <footer className={styles.footer}>
+        <p>© 2025 Biblioteca Virtual - Todos los derechos reservados</p>
+      </footer>
+    </div>
+  );
 }

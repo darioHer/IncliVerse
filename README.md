@@ -1,24 +1,29 @@
-# Virtual Library Login Interface
+# 📚 Biblioteca Virtual Inclusiva
 
-## Overview
-This project is a front-end interface for a virtual library login system built using Next.js. It emphasizes accessibility, semantic HTML, and SEO best practices.
+## 🌍 Descripción del Proyecto  
+Este proyecto es una **biblioteca virtual inclusiva** con un enfoque en **accesibilidad y buenas prácticas web**. La plataforma permite a todos los usuarios acceder a contenido digital sin barreras.
 
-## Features
-- **Semantic HTML**: Utilizes appropriate HTML elements to enhance accessibility and SEO.
-- **Accessibility**: Implements `aria` attributes to ensure the interface is usable for all users.
-- **CSS Practices**: Styles are applied using external CSS files, adhering to specificity and hierarchy principles without using `!important` or inline styles.
-- **Functionality without JavaScript**: The login form remains functional even when JavaScript is disabled.
+---
 
-## Installation
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Run `npm install` to install dependencies.
-4. Start the development server with `npm run dev`.
+## 🚀 Características Implementadas  
+✅ **Accesibilidad:**  
+   - Uso de etiquetas semánticas como `<header>`, `<main>`, `<section>`, `<footer>`.  
+   - Atributos `aria-labelledby` y `aria-label` para mejorar la navegación.  
 
-## HTML Features Applied
-- Use of `<form>`, `<input>`, and `<button>` elements for the login interface.
-- Proper labeling of form elements with `<label>` tags.
-- Use of `aria` attributes for enhanced accessibility.
+✅ **Modo Oscuro/Claro:**  
+   - Implementado con React y CSS.  
+   - Permite cambiar entre modos sin afectar la usabilidad.  
 
-## Conclusion
-This project serves as a foundational template for building accessible and user-friendly web applications.
+✅ **SEO Optimizado:**  
+   - Estructura semántica que mejora la indexación en motores de búsqueda.  
+   - Uso correcto de encabezados (`<h1>`, `<h2>`, `<p>`) para jerarquía clara.  
+
+✅ **Buenas Prácticas CSS:**  
+   - **Especificidad y Jerarquía:** Uso correcto de clases para evitar conflictos.  
+   - **Evitar `!important`:** Se prioriza la estructura en cascada de CSS.  
+   - **No usar estilos inline (`style="color: red"`).**  
+
+---
+
+## 📂 Estructura del Proyecto  
+

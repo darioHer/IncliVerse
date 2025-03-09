@@ -1,0 +1,55 @@
+/* library.module.css */
+
+.libraryContainer {
+  padding: 2rem;
+  background-color: #FAE3D9; /* Fondo cálido */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.bookCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bookCard:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bookImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bookTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3D405B;
+  margin-top: 10px;
+}
+
+.bookInfo {
+  font-size: 0.9rem;
+  color: #5A5A5A;
+  margin-top: 5px;
+}
+
+.bookType {
+  font-weight: bold;
+  color: #E07A5F;
+}

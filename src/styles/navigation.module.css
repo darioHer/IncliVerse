@@ -1,0 +1,39 @@
+:root {
+    --color-primario: #EB8369;  /* Coral */
+    --color-secundario: #DBDBD0; /* Gris suave */
+    --color-fondo: #FEFCEC;      /* Ivory */
+    --color-texto: #393939;      /* Negro */
+    --color-contraste: #FEFEFE;  /* Blanco */
+}
+
+.navbar {
+    background-color: var(--color-primario);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-contraste);
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: var(--color-contraste);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navLinks a:hover {
+    color: var(--color-texto);
+}

@@ -1,15 +1,46 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
+/* Variables de colores */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --bg-color: #ffffff;
 }
 
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Modo oscuro */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
 .container {
-  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }

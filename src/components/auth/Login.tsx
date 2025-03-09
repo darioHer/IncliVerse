@@ -1,13 +1,38 @@
-export default function LoginForm() {
-  return (
-    <form aria-labelledby="login-form" className="space-y-4">
-      <label htmlFor="email" className="block text-sm font-medium text-gray-700">Correo electrónico:</label>
-      <input type="email" id="email" required aria-label="Correo electrónico" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
-      
-      <label htmlFor="password" className="block text-sm font-medium text-gray-700">Contraseña:</label>
-      <input type="password" id="password" required aria-label="Contraseña" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+"use client"; 
 
-      <button type="submit" className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Iniciar sesión</button>
+import { useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
+import styles from "./login.module.css"; 
+
+export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  return (
+    <form className={styles.loginContainer}>
+      <div className={styles.inputContainer}>
+        <FaUser className={styles.icon} />
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={styles.input}
+        />
+      </div>
+
+      <div className={styles.inputContainer}>
+        <FaLock className={styles.icon} />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className={styles.input}
+        />
+      </div>
+
+      <button type="submit" className={styles.button}>Iniciar sesión</button>
     </form>
   );
 }
