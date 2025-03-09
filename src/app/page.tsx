@@ -1,15 +1,20 @@
-import Navigation from "../components/Navigation";
-import Library from "../components/Library";
+import './styles.css'; 
 
-export default function HomePage() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <header>
-        <Navigation />
-      </header>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start" aria-label="Contenido principal">
-        <Library />
-      </main>
-    </div>
-  );
+export default function Page() {
+    return (
+        <div>
+            <header className="header">
+                <h1>Nombre de la Biblioteca</h1>
+            </header>
+            <main className="main">
+                <h2>Noticias y Actualizaciones</h2>
+                <p>Aquí se mostrarán las últimas noticias sobre libros y actualizaciones de la biblioteca.</p>
+            </main>
+            <footer className="footer">
+                <p>Contacto: info@biblioteca.com | Teléfono: (123) 456-7890</p>
+                <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
+                <p>&copy; 2023 Derechos de autor del software</p>
+            </footer>
+        </div>
+    );
 }

@@ -1,32 +1,16 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import Navigation from "../components/layout/Navigation";
+import Sidebar from "../components/layout/Sidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Inclu-Verse | Plataforma Inclusiva",
-  description: "Plataforma para fomentar la inclusión a través de la educación.",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <head /> {/* Permite que Next.js maneje el head dinámicamente */}
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <main>{children}</main>
+      <body>
+        <Navigation />
+        <div className="container">
+          <Sidebar />
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
