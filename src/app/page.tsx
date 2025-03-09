@@ -4,7 +4,7 @@ export default function Page() {
     return (
         <div>
             <header className="header">
-                <h1>Nombre de la Biblioteca</h1>
+                <h1>incluVerse</h1>
             </header>
             <main className="main">
                 <h2>Noticias y Actualizaciones</h2>
