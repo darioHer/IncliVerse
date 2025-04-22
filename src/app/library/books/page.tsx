@@ -1,46 +1,35 @@
-import BookCard from '../../../components/library/BookCard';
+import Image from "next/image";
+import { FC } from "react";
 
-export default function BooksPage() {
+interface BookCardProps {
+  title: string;
+  author: string;
+  coverUrl: string;
+  onClick?: () => void;
+}
+
+const BookCard: FC<BookCardProps> = ({ title, author, coverUrl, onClick }) => {
   return (
-    <div>
-      <h1>Lista de Libros</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <BookCard 
-          title="El Principito" 
-          author="Antoine de Saint-Exupéry" 
-          type="Ficción" 
-          year={1943} 
-          image="ruta/a/la/imagen/el_principito.jpg" 
-        />
-        <BookCard 
-          title="1984" 
-          author="George Orwell" 
-          type="Distopía" 
-          year={1949} 
-          image="ruta/a/la/imagen/1984.jpg" 
-        />
-        <BookCard 
-          title="Cien años de soledad" 
-          author="Gabriel García Márquez" 
-          type="Realismo mágico" 
-          year={1967} 
-          image="ruta/a/la/imagen/cien_anos_de_soledad.jpg" 
-        />
-        <BookCard 
-          title="Don Quijote de la Mancha" 
-          author="Miguel de Cervantes" 
-          type="Novela" 
-          year={1605} 
-          image="ruta/a/la/imagen/don_quijote.jpg" 
-        />
-        <BookCard 
-          title="La sombra del viento" 
-          author="Carlos Ruiz Zafón" 
-          type="Novela" 
-          year={2001} 
-          image="ruta/a/la/imagen/la_sombra_del_viento.jpg" 
+    <article
+      className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-4 cursor-pointer"
+      role="button"
+      aria-label={`Ver detalles de ${title}`}
+      onClick={onClick}
+    >
+      <div className="relative h-56 w-full rounded-lg overflow-hidden">
+        <Image
+          src={coverUrl}
+          alt={`Portada del libro ${title}`}
+          fill
+          className="object-cover"
         />
       </div>
-    </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+        <p className="text-sm text-gray-500">{author}</p>
+      </div>
+    </article>
   );
-}
+};
+
+export default BookCard;
