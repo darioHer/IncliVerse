@@ -1,4 +1,4 @@
-import styles from "@/styles/library.module.css";
+import styles from "../../styles/library.module.css";
 
 export default function Library() {
   const books = [

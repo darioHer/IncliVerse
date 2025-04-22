@@ -1,4 +1,5 @@
-import styles from "@/styles/login.module.css";
+import styles from '../../../styles/login.module.css';
+import React from 'react';
 
 export default function LoginForm() {
   return (

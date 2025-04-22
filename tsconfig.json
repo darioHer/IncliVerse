@@ -23,17 +23,19 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./",
+    "baseUrl": "",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["*"]
     }
   },
   "include": [
     "src",
     ".next/types/**/*.ts"
   ],
+  "files": [
+    "global.d.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
 }
-

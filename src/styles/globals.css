@@ -1,46 +1,44 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Variables de colores */
 :root {
-  --primary-color: #4a90e2;
-  --secondary-color: #f4f4f4;
-  --text-color: #333;
-  --bg-color: #ffffff;
+  --color-primario: #EB8369;  /* Coral */
+  --color-secundario: #DBDBD0; /* Gris suave */
+  --color-fondo: #FEFCEC;      /* Ivory */
+  --color-texto: #393939;      /* Negro */
+  --color-contraste: #FEFEFE;  /* Blanco */
 }
 
-/* Estilos globales */
-body {
-  font-family: 'Arial', sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-/* Modo oscuro */
-.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ffffff;
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Contenedor principal */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+.pageContainer {
+  background-color: var(--color-fondo);
+  min-height: 100vh;
   padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: var(--color-texto);
+}
+
+.header {
+  background-color: var(--color-primario);
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-contraste);
+  border-radius: 8px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--color-secundario);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: var(--color-primario);
+  text-align: center;
+  color: var(--color-contraste);
+  border-top: 2px solid var(--color-texto);
+  border-radius: 8px;
 }

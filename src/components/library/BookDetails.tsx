@@ -1,6 +1,16 @@
 import React from 'react';
 
-const BookDetails = ({ book }) => {
+interface Book {
+  title: string;
+  author: string;
+  description: string;
+}
+
+type BookDetailsProps = {
+  book: Book | null;
+};
+
+const BookDetails: React.FC<BookDetailsProps> = ({ book }) => {
   if (!book) {
     return <div>Select a book to see the details.</div>;
   }

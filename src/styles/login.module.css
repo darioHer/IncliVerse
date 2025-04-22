@@ -1,34 +1,31 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  margin: auto;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #374151;
+  font-weight: bold;
+  color: var(--color-texto);
 }
 
 .input {
-  width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .button {
-  margin-top: 10px;
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--color-primario);
+  color: var(--color-contraste);
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #1d4ed8;
+  background-color: #d9745a;
 }

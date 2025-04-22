@@ -21,7 +21,8 @@ Este proyecto es una aplicación construida con Next.js que incluye un sistema d
   │   ├── ui
   │
   ├── styles
-  │
+  │   ├── global.css
+  |   ├── login.module.css|
   ├── .gitignore
   ├── eslint.config.mjs
   ├── global.d.ts
