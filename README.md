@@ -1,7 +1,18 @@
-# Proyecto Next.js con Autenticación y Estilos
+# 📚 IncliVerse – Biblioteca Digital Inclusiva
 
-Este proyecto es una aplicación construida con Next.js que incluye un sistema de autenticación con formularios de inicio de sesión y una estructura organizada de componentes y estilos. Se han aplicado principios de accesibilidad, semántica HTML y buenas prácticas de SEO.
+**IncliVerse** es una plataforma digital diseñada para ofrecer acceso inclusivo al conocimiento. Está pensada como una biblioteca en línea accesible para todas las personas, incluyendo aquellas con discapacidades auditivas o dificultades del habla.
 
+---
+
+## 🚀 Características principales
+
+- ✅ Interfaz accesible y responsiva
+- 🔐 Registro e inicio de sesión seguros con autenticación
+- 📚 Exploración de libros por categorías
+- 🧩 Sistema de filtros por género, disponibilidad y recomendación
+- 🌐 Despliegue en [Vercel](https://incli-verse.vercel.app)
+
+---
 ## 📂 Estructura del Proyecto
 
 ```
@@ -73,12 +84,13 @@ npm run dev
 
 Esto iniciará la aplicación en `http://localhost:3000`.
 
-## 📝 Notas
+## 👤 Autores
 
-Si encuentras errores con los estilos CSS o el uso de hooks como `useState`, asegúrate de que los archivos React que los usan estén marcados como `"use client"` al inicio del archivo.
+Desarrollado por **Michael Papamija** 
+GitHub: [@darioHer](https://github.com/dev-Alejo24/incluverse) 
 
-```tsx
-"use client";
-import { useState } from "react";
-```
+Desarrollado por **Dario Florez** 
+
+GitHub: [@darioHer](https://github.com/darioHer)
+
 
