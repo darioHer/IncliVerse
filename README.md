@@ -88,7 +88,7 @@ Esto iniciará la aplicación en `http://localhost:3000`.
 
 Desarrollado por **Michael Papamija** 
 
-GitHub: [@Alejo24](https://github.com/dev-Alejo24/incluverse) 
+GitHub: [@Alejo24](https://github.com/dev-Alejo24) 
 
 Desarrollado por **Dario Florez** 
 
