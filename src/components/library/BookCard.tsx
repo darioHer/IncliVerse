@@ -1,19 +1,37 @@
+// src/components/library/BookCard.tsx
+import Image from "next/image";
+import { FC } from "react";
+
 interface BookCardProps {
     title: string;
     author: string;
-    type: string;
-    year: number;
-    image: string;
+    coverUrl: string;
+    
+    onClick?: () => void;
 }
 
-export default function BookCard({ title, author, type, year, image }: BookCardProps) {
+const BookCard: FC<BookCardProps> = ({ title, author, coverUrl, onClick }) => {
     return (
-        <div className="border rounded-lg p-4" aria-label={`Título: ${title}, Autor: ${author}`}>
-            <img src={image} alt={title} className="w-full h-48 object-cover rounded-md" />
-            <h2 className="font-bold">{title}</h2>
-            <p>Autor: {author}</p>
-            <p>Tipo: {type}</p>
-            <p>Año de publicación: {year}</p>
-        </div>
+        <article
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-4 cursor-pointer"
+            role="button"
+            aria-label={`Ver detalles de ${title}`}
+            onClick={onClick}
+        >
+            <div className="relative h-56 w-full rounded-lg overflow-hidden">
+                <Image
+                    src={coverUrl}
+                    alt={`Portada del libro ${title}`}
+                    fill
+                    className="object-cover"
+                />
+            </div>
+            <div className="mt-4">
+                <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+                <p className="text-sm text-gray-500">{author}</p>
+            </div>
+        </article>
     );
-}
+};
+
+export default BookCard;

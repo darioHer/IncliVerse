@@ -7,13 +7,15 @@ export default function Page() {
       <header className={styles.header}>
         📚 Biblioteca Virtual
       </header>
-      
+
       <main className={styles.content}>
-        <p>Bienvenido a la biblioteca virtual inclusiva. Explora, aprende y disfruta del conocimiento accesible para todos.</p>
+        <p className={styles.welcomeText}>
+          Bienvenido a la biblioteca virtual inclusiva. Explora, aprende y disfruta del conocimiento accesible para todos.
+        </p>
       </main>
-      
+
       <footer className={styles.footer}>
-        <p>© 2025 Biblioteca Virtual - Todos los derechos reservados</p>
+        © 2025 Biblioteca Virtual — Todos los derechos reservados
       </footer>
     </div>
   );

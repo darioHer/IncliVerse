@@ -1,36 +1,45 @@
 .pageContainer {
-    background-color: var(--color-fondo);
     min-height: 100vh;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo-suave, #f5f1d0);
+    color: var(--color-texto, #2d3748);
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
 }
 
 .header {
-    background-color: var(--color-primario);
-    padding: 15px;
-    text-align: center;
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--color-contraste);
-    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    color: var(--color-acento, #2563eb);
 }
 
 .content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--color-secundario);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.welcomeText {
+    font-size: 1.25rem;
+    max-width: 600px;
+    line-height: 1.7;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: var(--color-primario);
     text-align: center;
-    color: var(--color-contraste);
-    border-top: 2px solid var(--color-texto);
-    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+    color: #6b7280;
 }

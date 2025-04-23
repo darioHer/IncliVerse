@@ -1,12 +1,13 @@
 'use client';
+
 import Link from "next/link";
 import { useState } from 'react';
+import styles from "../../styles/sidebar.module.css";
 
 export default function Sidebar() {
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
-  const toggleCategories = () => {
-    setIsCategoriesOpen(!isCategoriesOpen);
-  };
+
+  const toggleCategories = () => setIsCategoriesOpen(prev => !prev);
 
   const genres = [
     { name: "Ficción", path: "/library?genre=ficcion" },
@@ -17,48 +18,48 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="bg-gray-200 p-4 rounded-lg shadow-md">
-      <nav>
-        <ul className="space-y-2">
-          <li>
-            <button
-              onClick={toggleCategories}
-              className="block p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-            >
-              Filtrar
-            </button>
-          </li>
-        </ul>
-      </nav>
+    <aside className={styles.sidebar}>
+      <nav aria-label="Barra lateral de filtros">
+        <button
+          onClick={toggleCategories}
+          className={styles.toggleButton}
+          aria-expanded={isCategoriesOpen}
+          aria-controls="sidebar-filtros"
+        >
+          {isCategoriesOpen ? "Ocultar filtros" : "Mostrar filtros"}
+        </button>
 
-      {isCategoriesOpen && (
-        <div className="mt-4">
-          <h2 className="font-bold text-lg mb-2">Categorías</h2>
-          <ul className="list-disc pl-5">
-            {genres.map((genre) => (
-              <li key={genre.name}>
-                <Link 
-                  href={genre.path}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  {genre.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <h2 className="font-bold text-lg mt-4 mb-2">Filtros</h2>
-          <div>
-            <label className="block mb-1">
-              <input type="checkbox" className="mr-2" />
-              Mostrar solo disponibles
-            </label>
-            <label className="block mb-1">
-              <input type="checkbox" className="mr-2" />
-              Mostrar solo recomendados
-            </label>
+        {isCategoriesOpen && (
+          <div id="sidebar-filtros" className={styles.filterSection}>
+            <section>
+              <h2 className={styles.sectionTitle}>Categorías</h2>
+              <ul className={styles.genreList}>
+                {genres.map((genre) => (
+                  <li key={genre.name}>
+                    <Link href={genre.path} className={styles.genreLink}>
+                      {genre.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className={styles.filterSection}>
+              <h2 className={styles.sectionTitle}>Filtros</h2>
+              <div className={styles.checkboxGroup}>
+                <label>
+                  <input type="checkbox" className="mr-2" />
+                  Mostrar solo disponibles
+                </label>
+                <label>
+                  <input type="checkbox" className="mr-2" />
+                  Mostrar solo recomendados
+                </label>
+              </div>
+            </section>
           </div>
-        </div>
-      )}
+        )}
+      </nav>
     </aside>
   );
 }

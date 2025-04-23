@@ -1,9 +1,9 @@
 :root {
-  --color-primario: #EB8369;  /* Coral */
-  --color-secundario: #DBDBD0; /* Gris suave */
-  --color-fondo: #FEFCEC;      /* Ivory */
-  --color-texto: #393939;      /* Negro */
-  --color-contraste: #FEFEFE;  /* Blanco */
+  --color-primario: #EB8369;  
+  --color-secundario: #DBDBD0; 
+  --color-fondo: #FEFCEC;      
+  --color-texto: #393939;      
+  --color-contraste: #FEFEFE;  
 }
 
 .pageContainer {

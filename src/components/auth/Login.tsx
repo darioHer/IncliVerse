@@ -10,6 +10,8 @@ export default function LoginForm() {
 
   return (
     <form className={styles.loginContainer}>
+      <h2 className={styles.title}>Iniciar Sesión</h2>
+
       <div className={styles.inputContainer}>
         <FaUser className={styles.icon} />
         <input

@@ -1,26 +1,32 @@
-import React from 'react';
+import Image from "next/image";
+import { FC } from "react";
 
-interface Book {
+interface BookDetailsProps {
   title: string;
   author: string;
   description: string;
+  coverUrl: string;
 }
 
-type BookDetailsProps = {
-  book: Book | null;
-};
-
-const BookDetails: React.FC<BookDetailsProps> = ({ book }) => {
-  if (!book) {
-    return <div>Select a book to see the details.</div>;
-  }
-
+const BookDetails: FC<BookDetailsProps> = ({ title, author, description, coverUrl }) => {
   return (
-    <div>
-      <h2>{book.title}</h2>
-      <p>{book.author}</p>
-      <p>{book.description}</p>
-    </div>
+    <section className="bg-white p-6 rounded-xl shadow-lg max-w-3xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="relative w-full md:w-1/3 h-60 rounded overflow-hidden">
+          <Image
+            src={coverUrl}
+            alt={`Portada del libro ${title}`}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="flex-1">
+          <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+          <p className="text-md text-gray-600 mb-4">por {author}</p>
+          <p className="text-gray-700 leading-relaxed">{description}</p>
+        </div>
+      </div>
+    </section>
   );
 };
 
