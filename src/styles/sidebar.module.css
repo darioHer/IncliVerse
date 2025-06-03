@@ -1,65 +1,100 @@
-.sidebar {
-  background-color: var(--color-fondo-suave, #f9f9f6); 
-  border: 1px solid var(--color-borde, #e2e8f0);
+/* Panel lateral */
+.filterPanel {
+  position: absolute;
+  top: 4.5rem;
+  left: 1rem;
+  background-color: #ffffff;
   border-radius: 1rem;
-  padding: 1rem 1.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  max-width: 280px;
-  width: 100%;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  width: 260px;
+  z-index: 100;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #e5e7eb;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.toggleButton {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  background-color: var(--color-acento, #2563eb);
-  color: #fff;
+/* Botón hamburguesa */
+.filterToggleWrapper {
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  z-index: 105;
+}
+
+.hamburgerButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
   border: none;
-  border-radius: 0.5rem;
-  font-weight: 600;
+  border-radius: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-.toggleButton:hover {
-  background-color: var(--color-acento-hover, #1e40af);
+.hamburgerButton:hover {
+  background-color: #1e40af;
 }
 
-.filterSection {
-  margin-top: 1.25rem;
+.hamburgerIcon {
+  font-size: 1rem;
 }
 
+/* Títulos */
 .sectionTitle {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--color-texto, #1f2937);
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.25rem;
 }
 
+/* Lista de géneros */
 .genreList {
   list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.genreList li {
-  margin-bottom: 0.4rem;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .genreLink {
-  color: var(--color-link, #2563eb);
+  color: #2563eb;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .genreLink:hover {
-  color: var(--color-link-hover, #1e40af);
+  color: #1e40af;
+  text-decoration: underline;
 }
 
+/* Grupo de checkboxes */
 .checkboxGroup {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -37,7 +37,7 @@ export default function RegisterPage() {
         />
 
         
-        <button type="submit" className={styles.button}>Registrarse</button>
+        <button type="submit" className={styles.button}>Registrars</button>
 
         <p className={styles.loginLink}>
           ¿Ya tienes una cuenta?{" "}

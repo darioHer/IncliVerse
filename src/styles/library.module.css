@@ -1,15 +1,17 @@
 .libraryContainer {
   padding: 2rem;
-  background-color: #fdece1; 
+  background-color: #fdece1;
   min-height: 100vh;
 }
 
+/* Mejora la legibilidad y el orden de visualización en distintos dispositivos */
 .bookGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
 }
 
+/* Componente principal de cada libro */
 .bookCard {
   background-color: #fff;
   border-radius: 1rem;
@@ -21,11 +23,21 @@
   justify-content: space-between;
 }
 
-.bookCard:hover {
+/* Interacción visual al pasar el cursor */
+.bookCard:hover,
+.bookCard:focus-within {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
+/* Mejora accesibilidad en navegación por teclado */
+.bookCard:focus-within {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Imagen del libro */
 .bookImage {
   width: 100%;
   height: 200px;
@@ -34,6 +46,7 @@
   margin-bottom: 1rem;
 }
 
+/* Fallback accesible cuando no hay imagen */
 .noImage {
   width: 100%;
   height: 200px;
@@ -51,20 +64,25 @@
   gap: 0.5rem;
 }
 
+/* Icono de libro en caso de ausencia de imagen */
 .bookIcon {
   font-size: 2rem;
   color: #9ca3af;
 }
 
+/* Título del libro */
 .bookTitle {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #1f2937;
+  line-height: 1.4;
 }
 
+/* Información adicional */
 .bookInfo {
   font-size: 0.95rem;
   color: #374151;
   margin-bottom: 0.25rem;
+  line-height: 1.5;
 }
